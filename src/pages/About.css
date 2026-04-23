@@ -1,0 +1,104 @@
+/* About.css */
+.about-section { margin-bottom: 40px; }
+.about-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.about-section > p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.about-stat-item {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 24px 16px;
+  text-align: center;
+  border: 1px solid var(--border-light);
+}
+.as-number {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+.as-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: "Noto Sans SC", sans-serif;
+}
+
+.star-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.star-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 28px 20px;
+  text-align: center;
+  border: 1px solid var(--border-light);
+}
+.star-icon {
+  font-size: 24px;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.star-count {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+.star-name {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-family: "Noto Sans SC", sans-serif;
+}
+
+.principle-list { display: flex; flex-direction: column; gap: 16px; }
+.principle-item {
+  display: flex;
+  gap: 20px;
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border: 1px solid var(--border-light);
+  align-items: flex-start;
+}
+.principle-num {
+  font-size: 28px;
+  font-weight: 900;
+  color: rgba(184,56,79,0.15);
+  min-width: 48px;
+  line-height: 1;
+  font-family: "Noto Sans SC", sans-serif;
+}
+.principle-content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.principle-content p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.cta-section { text-align: center; padding: 40px 0; }
+
+@media (max-width: 640px) {
+  .principle-item { flex-direction: column; gap: 12px; }
+  .principle-num { font-size: 22px; }
+}
