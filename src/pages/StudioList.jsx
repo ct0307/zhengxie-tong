@@ -138,11 +138,26 @@ export default function StudioList() {
                   role="listitem"
                   aria-label={studio.name}
                 >
-                  <div className="scard-top">
-                    <div className="scard-number">{studio.id}</div>
-                    <span className={`scard-category ${TAG_MAP[studio.category] || 'tag-street'}`}>
+                  {/* 图片区域 */}
+                  <div className="scard-img-wrap">
+                    {studio.image ? (
+                      <img
+                        src={studio.image}
+                        alt={studio.name}
+                        className="scard-img"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="scard-img-placeholder" aria-hidden="true">
+                        <span className="scard-img-icon">🏛</span>
+                      </div>
+                    )}
+                    <span className={`scard-img-tag ${TAG_MAP[studio.category] || 'tag-street'}`}>
                       {studio.category}
                     </span>
+                  </div>
+                  <div className="scard-top">
+                    <div className="scard-number">{studio.id}</div>
                     <h3>{studio.name}</h3>
                     <div className="scard-leader">负责人：{studio.leader}</div>
                   </div>

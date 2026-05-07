@@ -1,0 +1,211 @@
+/* Practice Center Page Styles */
+
+.pc-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+/* Tabs */
+.pc-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 6px;
+}
+
+.pc-tab {
+  flex: 1;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: var(--color-foreground-muted);
+  transition: all 0.2s ease;
+}
+
+.pc-tab.active {
+  background: linear-gradient(135deg, var(--color-primary), #991B1B);
+  color: white;
+  box-shadow: 0 2px 8px rgba(153, 27, 27, 0.3);
+}
+
+.pc-tab:hover:not(.active) {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Info Card */
+.pc-info-card {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 32px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.pc-info-img {
+  height: 100%;
+  min-height: 320px;
+}
+
+.pc-info-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pc-info-body {
+  padding: 32px 32px 32px 0;
+}
+
+.pc-info-body h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-foreground);
+  margin: 0 0 16px 0;
+}
+
+.pc-info-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--color-subtle);
+}
+
+.pc-info-desc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--color-foreground-muted);
+  margin-bottom: 20px;
+}
+
+.pc-honors h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-foreground);
+  margin: 0 0 10px 0;
+}
+
+.pc-honor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pc-honor-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(185, 28, 28, 0.08);
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+/* Monthly Plan */
+.pc-plan-section {
+  margin-bottom: 40px;
+}
+
+.pc-plan-section h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-foreground);
+  margin: 0 0 24px 0;
+}
+
+.pc-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.pc-plan-item {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pc-plan-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.pc-plan-month {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary), #991B1B);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.pc-plan-content h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-foreground);
+  margin: 0 0 4px 0;
+}
+
+.pc-plan-content p {
+  font-size: 13px;
+  color: var(--color-foreground-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Back Button */
+.pc-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 32px;
+  background: linear-gradient(135deg, var(--color-primary), #991B1B);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(153, 27, 27, 0.35);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.pc-back-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pc-info-card {
+    grid-template-columns: 1fr;
+  }
+  .pc-info-img {
+    min-height: 200px;
+  }
+  .pc-info-body {
+    padding: 24px;
+  }
+}

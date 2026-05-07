@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import studios from '../data/studios.json';
-import './StudioList.css';
+import './About.css';
 
 const PRINCIPLES = [
   { icon: '🏛', title: '向基层延伸', desc: '坚持"向基层延伸覆盖"，让委员工作室深入社区、街道各角落' },
@@ -13,6 +13,17 @@ const STAR_DATA = [
   { stars: '五星', count: studios.statistics.star_ratings_2025.five_star, color: '#A16207' },
   { stars: '四星', count: studios.statistics.star_ratings_2025.four_star, color: '#78716C' },
   { stars: '三星', count: studios.statistics.star_ratings_2025.three_star, color: '#92400E' },
+];
+
+const PLATFORM_INTRO = '上城区政协按照"向基层延伸覆盖"和"不建机构建机制"工作要求，坚持党建引领，强化委员工作室"三位一体"建设，牢牢把握功能定位，立足区域发展实际，以打造"一室一品"为特色，深化"楼宇商圈""宋韵文化"和"全龄特有爱"公益慈善品牌建设，着力构建宽领域、多层次、常态化的协商体系，不断提升委员工作室辨识度和影响力，密切与界别群众的联系，凝聚社会各界共识，助推区域经济高质量发展。';
+
+const STAR_STUDIOS = [
+  { name: '政协湖滨小组委员工作室', highlight: '搭建商圈"晴雨议事厅"，企业代表担任"轮值议事长"，领办商圈健康、金融、管理、教育、法律五大服务项目', leader: '查靖' },
+  { name: '政协清波小组委员工作室', highlight: '创新"1+6+3"工作模式，依托"清波话坊"开展协商议事215场，服务群众2500余人次，获杭州市政协民生议事堂精品协商案例', leader: '徐洁' },
+  { name: '政协紫阳小组委员工作室', highlight: '位于新中国首个居民委员会诞生地，搭建"传承民主基因、擦亮协商品牌"基层综合平台，被认定为协商民主实践基地', leader: '王盈' },
+  { name: '政协四季青小组委员工作室', highlight: '多次获评五星级委员工作室，开展20余场专题协商活动，服务群众1580人次，新就业群体工作获中组部、中社部充分肯定', leader: '李岗' },
+  { name: '采荷街道"幸福19"委员工作室', highlight: '构建"1+6+16+N"协商矩阵，创设"1731"民生议事工作法，围绕老旧小区改造、新就业群体权益保障等开展协商', leader: '赵丹晨' },
+  { name: '政协彭埠小组委员工作室', highlight: '发挥罗家老宅全市首个协商民主实践中心区级分中心资源优势，深耕书香政协，举办读书活动20余次覆盖200余人次', leader: '任渊' },
 ];
 
 export default function About() {
@@ -33,119 +44,103 @@ export default function About() {
         </div>
       </header>
 
-      <div style={{ maxWidth: 'var(--max-width)', margin: 'auto', padding: 'var(--space-12) var(--space-6) var(--space-20)' }}>
+      <div className="about-container">
 
         {/* Overview Card */}
-        <div style={{
-          background: 'var(--color-surface)',
-          border: '1px solid var(--color-border)',
-          borderRadius: 'var(--radius-xl)',
-          padding: 'var(--space-10)',
-          marginBottom: 'var(--space-8)',
-          display: 'grid',
-          gridTemplateColumns: '1fr 300px',
-          gap: 'var(--space-10)',
-          alignItems: 'center'
-        }}>
-          <div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-2xl)', fontWeight: 700, marginBottom: 'var(--space-4)', color: 'var(--color-foreground)' }}>
-              平台概述
-            </h2>
-            <p style={{ fontSize: 'var(--text-base)', lineHeight: 'var(--leading-relaxed)', color: 'var(--color-foreground-muted)', maxWidth: '65ch' }}>
-              {studios.overview}
+        <div className="about-overview-card">
+          <div className="about-overview-text">
+            <h2>平台概述</h2>
+            <p>{PLATFORM_INTRO}</p>
+            <p style={{ marginTop: '12px', fontSize: '14px', color: 'var(--color-foreground-muted)' }}>
+              目前，全区共有委员工作室<strong>{total}</strong>家，实现履职平台街道委员小组全覆盖。
+              2025年度共认定五星级委员工作室<strong>{studios.statistics.star_ratings_2025.five_star}</strong>家，
+              四星级委员工作室<strong>{studios.statistics.star_ratings_2025.four_star}</strong>家，
+              三星级委员工作室<strong>{studios.statistics.star_ratings_2025.three_star}</strong>家。
             </p>
           </div>
 
           {/* Coverage Ring */}
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ position: 'relative', width: '160px', height: '160px', margin: 'auto' }}>
+          <div className="about-ring-wrap">
+            <div className="about-ring">
               <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="80" cy="80" r="70" stroke="var(--color-border)" strokeWidth="12" fill="none"/>
                 <circle cx="80" cy="80" r="70" stroke="var(--color-primary)" strokeWidth="12" fill="none"
                   strokeDasharray={`${2 * Math.PI * 70 * fiveStarPercent / 100} ${2 * Math.PI * 70}`}
                   strokeDashoffset={2 * Math.PI * 70 * 0.25}
                   strokeLinecap="round"
-                  style={{ transition: 'stroke-dasharray 1s var(--ease-out)' }}
                 />
               </svg>
-              <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-3xl)', fontWeight: 800, color: 'var(--color-primary)', lineHeight: 1 }}>
-                  {fiveStarPercent}%
-                </span>
-                <span style={{ fontSize: 'var(--text-xs)', color: 'var(--color-subtle)' }}>五星工作室</span>
+              <div className="about-ring-label">
+                <span className="about-ring-num">{fiveStarPercent}%</span>
+                <span className="about-ring-text">五星工作室</span>
               </div>
             </div>
-            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-subtle)', marginTop: 'var(--space-3)' }}>
-              2025年度评定结果
-            </p>
+            <p className="about-ring-sub">2025年度评定结果</p>
           </div>
         </div>
 
         {/* Work Principles */}
-        <div style={{ marginBottom: 'var(--space-8)' }}>
-          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-2xl)', fontWeight: 700, marginBottom: 'var(--space-6)' }}>
+        <section className="about-section">
+          <h2 className="about-section-title">
             工作理念
-            <div style={{ width: '40px', height: '3px', background: 'linear-gradient(90deg, var(--color-primary), var(--color-gold))', marginTop: '8px', borderRadius: '999px' }} />
+            <span className="about-title-bar" />
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 'var(--space-5)' }}>
+          <div className="about-principles-grid">
             {PRINCIPLES.map((p, i) => (
-              <div key={i} style={{
-                padding: 'var(--space-6)',
-                background: 'var(--color-surface)',
-                border: '1px solid var(--color-border)',
-                borderRadius: 'var(--radius-xl)',
-              }}>
-                <div style={{ fontSize: '28px', marginBottom: 'var(--space-3)' }}>{p.icon}</div>
-                <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, marginBottom: 'var(--space-2)', fontSize: 'var(--text-lg)' }}>
-                  {p.title}
-                </h3>
-                <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-foreground-muted)', lineHeight: 'var(--leading-relaxed)' }}>
-                  {p.desc}
-                </p>
+              <div key={i} className="about-principle-card">
+                <div className="about-principle-icon">{p.icon}</div>
+                <h3>{p.title}</h3>
+                <p>{p.desc}</p>
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* Star Ratings */}
-        <div style={{ marginBottom: 'var(--space-8)' }}>
-          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-2xl)', fontWeight: 700, marginBottom: 'var(--space-6)' }}>
+        <section className="about-section">
+          <h2 className="about-section-title">
             2025年度星级评定
-            <div style={{ width: '40px', height: '3px', background: 'linear-gradient(90deg, var(--color-primary), var(--color-gold))', marginTop: '8px', borderRadius: '999px' }} />
+            <span className="about-title-bar" />
           </h2>
-          <div style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-xl)', padding: 'var(--space-8)' }}>
+          <div className="about-star-card">
             {STAR_DATA.map((item, i) => (
-              <div key={i} style={{ display: 'grid', gridTemplateColumns: '80px 1fr 60px', alignItems: 'center', gap: 'var(--space-4)', marginBottom: i < STAR_DATA.length - 1 ? 'var(--space-5)' : 0 }}>
-                <span style={{ fontWeight: 700, color: item.color, fontSize: 'var(--text-base)' }}>
+              <div key={i} className="about-star-row">
+                <span className="about-star-label" style={{ color: item.color }}>
                   {item.stars}工作室
                 </span>
-                <div style={{ height: '10px', background: 'var(--color-bg-alt)', borderRadius: '999px', overflow: 'hidden' }}>
-                  <div style={{
-                    height: '100%',
+                <div className="about-star-bar-bg">
+                  <div className="about-star-bar-fill" style={{
                     width: `${(item.count / total) * 100}%`,
                     background: `linear-gradient(90deg, ${item.color}, ${item.color}88)`,
-                    borderRadius: '999px',
-                    transition: 'width 1s var(--ease-out)'
                   }} />
                 </div>
-                <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--text-xl)', color: item.color, textAlign: 'right' }}>
-                  {item.count}
-                </span>
+                <span className="about-star-num" style={{ color: item.color }}>{item.count}</span>
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
-        <div style={{ textAlign: 'center' }}>
-          <Link to="/studios" className="btn-primary" style={{
-            display: 'inline-flex', alignItems: 'center', gap: '8px',
-            padding: 'var(--space-3) var(--space-8)',
-            background: 'linear-gradient(135deg, var(--color-primary), #991B1B)',
-            color: 'white', fontWeight: 600, fontSize: 'var(--text-base)',
-            borderRadius: 'var(--radius-lg)',
-            boxShadow: '0 4px 16px oklch(0.55 0.18 25 / 0.35)',
-            transition: 'all var(--duration-fast)'
-          }}>
+        {/* Star Studio Highlights */}
+        <section className="about-section">
+          <h2 className="about-section-title">
+            星级委员工作室风采
+            <span className="about-title-bar" />
+          </h2>
+          <div className="about-star-studios-grid">
+            {STAR_STUDIOS.map((s, i) => (
+              <div key={i} className="about-star-studio-card">
+                <div className="about-star-studio-header">
+                  <h4>{s.name}</h4>
+                  <span className="about-star-studio-leader">领衔：{s.leader}</span>
+                </div>
+                <p className="about-star-studio-desc">{s.highlight}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <div className="about-cta">
+          <Link to="/studios" className="about-cta-btn">
             浏览全部工作室
           </Link>
         </div>

@@ -5,6 +5,9 @@ import './Layout.css';
 const NAV_ITEMS = [
   { path: '/', label: '首页' },
   { path: '/studios', label: '履职平台' },
+  { path: '/boundary', label: '界别情况' },
+  { path: '/practice-center', label: '实践中心' },
+  { path: '/plans', label: '履职计划' },
   { path: '/about', label: '委员之家' },
   { path: '/gallery', label: '履职风采' },
 ];
@@ -111,6 +114,7 @@ export default function Layout({ children }) {
             <Link to="/studios">履职平台</Link>
             <Link to="/about">委员之家</Link>
             <Link to="/gallery">履职风采</Link>
+            <Link to="/boundary">界别情况</Link>
           </div>
           <div className="footer-col">
             <h4>工作室分类</h4>

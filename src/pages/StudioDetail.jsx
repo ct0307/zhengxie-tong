@@ -50,6 +50,28 @@ export default function StudioDetail() {
 
           {/* Main */}
           <div>
+            {/* 活动图片 */}
+            {studio.image && (
+              <div style={{
+                borderRadius: 'var(--radius-xl)',
+                overflow: 'hidden',
+                marginBottom: 'var(--space-6)',
+                border: '1px solid var(--color-border)',
+                boxShadow: 'var(--shadow-md)'
+              }}>
+                <img
+                  src={studio.image}
+                  alt={`${studio.name}活动图片`}
+                  style={{
+                    width: '100%',
+                    height: '300px',
+                    objectFit: 'cover',
+                    display: 'block'
+                  }}
+                />
+              </div>
+            )}
+
             <div style={{
               background: 'var(--color-surface)',
               border: '1px solid var(--color-border)',

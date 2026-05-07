@@ -2,14 +2,21 @@ import { Link } from 'react-router-dom';
 import './StudioList.css';
 
 const ACTIVITIES = [
-  { category: '宋韵文化', color: '#A16207', bg: '#FEF3C7', studio: '俞富康宋韵文化委员工作室', title: '宋韵文化传承与创新专题活动', date: '2025年04月', img: null },
-  { category: '社区服务', color: '#15803D', bg: '#DCFCE7', studio: '幸福邻里委员工作室', title: '"邻里守望"社区微治理交流活动', date: '2025年03月', img: null },
-  { category: '大健康', color: '#0D9488', bg: '#CCFBF1', studio: '大健康委员工作室', title: '健康义诊进社区专项活动', date: '2025年03月', img: null },
-  { category: '公益慈善', color: '#BE185D', bg: '#FCE7F3', studio: '爱馨文化公益委员工作室', title: '"特有爱"公益文化艺术展演', date: '2025年02月', img: null },
-  { category: '协商民主', color: '#7C3AED', bg: '#F3E8FF', studio: '"老爸好商量"委员工作室', title: '老城厢更新改造协商民主座谈会', date: '2025年02月', img: null },
-  { category: '非遗文化', color: '#1D4ED8', bg: '#DBEAFE', studio: '非遗委员工作室', title: '非物质文化遗产技艺传承活动', date: '2025年01月', img: null },
-  { category: '教育', color: '#EA580C', bg: '#FFEDD5', studio: '"育共体 阳光行"委员工作室', title: '家校社协同育人研讨交流活动', date: '2025年01月', img: null },
-  { category: '侨务', color: '#15803D', bg: '#DCFCE7', studio: '侨见未来委员工作室', title: '侨界委员履职经验分享会', date: '2024年12月', img: null },
+  { category: '协商民主', color: '#7C3AED', bg: '#F3E8FF', studio: '新时代协商民主实践中心', title: '市政协矩阵建设座谈会在上城区分中心召开', date: '2025年04月', img: '/images/gallery/gallery-1.webp' },
+  { category: '党建联建', color: '#B91C1C', bg: '#FEE2E2', studio: '彭埠分中心', title: '市区街三级政协党建联建工作会议召开', date: '2025年03月', img: '/images/gallery/gallery-2.webp' },
+  { category: '民生议事', color: '#15803D', bg: '#DCFCE7', studio: '彭埠街道委员小组', title: '"圆梦安居·助力街道回迁安置"民生议事堂', date: '2025年03月', img: '/images/gallery/gallery-3.webp' },
+  { category: '非遗文化', color: '#1D4ED8', bg: '#DBEAFE', studio: '彭埠街道委员小组', title: '委员小组开展非遗体验活动', date: '2025年02月', img: '/images/gallery/gallery-4.webp' },
+  { category: '教育', color: '#EA580C', bg: '#FFEDD5', studio: '彭埠分中心联盟单位', title: '夏衍小学开展棋类比赛', date: '2025年02月', img: '/images/gallery/gallery-5.webp' },
+  { category: '界别活动', color: '#A16207', bg: '#FEF3C7', studio: '妇联界别', title: '妇联界别举办国学文化品鉴暨界别调研总结会', date: '2025年01月', img: '/images/gallery/gallery-6.webp' },
+  { category: '大健康', color: '#0D9488', bg: '#CCFBF1', studio: '多界别联合', title: '中医养生专题讲座及义诊服务活动', date: '2025年01月', img: '/images/gallery/gallery-7.webp' },
+  { category: '商圈建设', color: '#7C3AED', bg: '#F3E8FF', studio: '湖滨街道委员小组', title: '"助推商圈社区建设"民生议事堂活动', date: '2024年12月', img: '/images/gallery/gallery-8.webp' },
+  { category: '调研考察', color: '#B91C1C', bg: '#FEE2E2', studio: '紫阳分中心', title: '区政协孙国方主席赴紫阳分中心调研', date: '2024年12月', img: '/images/gallery/gallery-9.webp' },
+  { category: '调研考察', color: '#1D4ED8', bg: '#DBEAFE', studio: '紫阳分中心', title: '市政协吴玉凤副秘书长调研分中心建设工作', date: '2024年11月', img: '/images/gallery/gallery-10.webp' },
+  { category: '社区治理', color: '#15803D', bg: '#DCFCE7', studio: '紫阳上羊实践点', title: '"推动邻里食堂智能化"专题协商会', date: '2024年11月', img: '/images/gallery/gallery-11.webp' },
+  { category: '物业协商', color: '#0D9488', bg: '#CCFBF1', studio: '清波街道委员小组', title: '老旧小区物业服务"质价双提"议事协商', date: '2024年10月', img: '/images/gallery/gallery-12.webp' },
+  { category: '文化交流', color: '#A16207', bg: '#FEF3C7', studio: '小营街道委员小组', title: '"遇见东坡"文化交流活动', date: '2024年10月', img: '/images/gallery/gallery-13.webp' },
+  { category: '民主监督', color: '#EA580C', bg: '#FFEDD5', studio: '望江街道委员小组', title: '"普及全民金融知识·增强百姓防诈意识"专题协商', date: '2024年09月', img: '/images/gallery/gallery-14.webp' },
+  { category: '读书会', color: '#7C3AED', bg: '#F3E8FF', studio: '南星街道委员小组', title: '"赓续历史之文脉·建言服务为民生"冬季读书会', date: '2024年09月', img: '/images/gallery/gallery-15.webp' },
 ];
 
 export default function Gallery() {
@@ -46,7 +53,7 @@ export default function Gallery() {
               onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = 'var(--shadow-lg)'; }}
               onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
             >
-              {/* Image Placeholder */}
+              {/* Image Area */}
               <div style={{
                 height: i % 3 === 0 ? '220px' : '180px',
                 background: `linear-gradient(135deg, ${act.bg}, ${act.bg}88)`,
@@ -56,21 +63,38 @@ export default function Gallery() {
                 position: 'relative',
                 overflow: 'hidden'
               }}>
-                <div style={{
-                  width: '64px', height: '64px',
-                  borderRadius: 'var(--radius-lg)',
-                  background: 'rgba(255,255,255,0.6)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '28px',
-                  backdropFilter: 'blur(4px)'
-                }}>
-                  {i % 8 === 0 ? '🎭' : i % 8 === 1 ? '🤝' : i % 8 === 2 ? '🏥' : i % 8 === 3 ? '🌸' : i % 8 === 4 ? '🗣' : i % 8 === 5 ? '🎨' : i % 8 === 6 ? '📚' : '🌍'}
-                </div>
+                {act.img ? (
+                  <img
+                    src={act.img}
+                    alt={act.title}
+                    loading="lazy"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      display: 'block',
+                      transition: 'transform 0.4s ease'
+                    }}
+                    onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.05)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.transform = 'scale(1)'; }}
+                  />
+                ) : (
+                  <div style={{
+                    width: '64px', height: '64px',
+                    borderRadius: 'var(--radius-lg)',
+                    background: 'rgba(255,255,255,0.6)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: '28px',
+                    backdropFilter: 'blur(4px)'
+                  }}>
+                    {i % 8 === 0 ? '🎭' : i % 8 === 1 ? '🤝' : i % 8 === 2 ? '🏥' : i % 8 === 3 ? '🌸' : i % 8 === 4 ? '🗣' : i % 8 === 5 ? '🎨' : i % 8 === 6 ? '📚' : '🌍'}
+                  </div>
+                )}
                 <div style={{
                   position: 'absolute',
                   top: 'var(--space-3)',
                   right: 'var(--space-3)',
-                  background: 'rgba(255,255,255,0.8)',
+                  background: 'rgba(255,255,255,0.85)',
                   backdropFilter: 'blur(4px)',
                   borderRadius: 'var(--radius-full)',
                   padding: '2px 10px',

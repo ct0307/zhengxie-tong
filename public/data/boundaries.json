@@ -1,0 +1,318 @@
+{
+  "title": "界别基本情况",
+  "description": "上城区政协设16个界别，涵盖中共、无党派、共青团、工会、妇联、工商联、科技、教育、医卫等领域，各界别积极开展履职活动。",
+  "boundaries": [
+    {
+      "id": 1,
+      "name": "中共",
+      "count": 2,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-1.webp",
+          "desc": "中共界别委员交流活动"
+        },
+        {
+          "img": "/images/boundary/boundary-2.webp",
+          "desc": "区政协一届三次会议中共界别小组讨论会"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "无党派",
+      "count": 5,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-3.webp",
+          "desc": "参加老旧小区物业提质协商议事"
+        },
+        {
+          "img": "/images/boundary/boundary-4.webp",
+          "desc": "无党派界别赴区司法局调研涉外法律服务"
+        },
+        {
+          "img": "/images/boundary/boundary-5.webp",
+          "desc": "范国良副主席为老字号工作室揭牌"
+        },
+        {
+          "img": "/images/boundary/boundary-6.webp",
+          "desc": "无党派界别主题分享活动"
+        },
+        {
+          "img": "/images/boundary/boundary-7.webp",
+          "desc": "重阳节开展为老服务"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "共青团、青联",
+      "count": 4,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-8.webp",
+          "desc": "共青团、青联界别活动"
+        },
+        {
+          "img": "/images/boundary/boundary-9.webp",
+          "desc": "共青团、青联界别交流"
+        },
+        {
+          "img": "/images/boundary/boundary-10.webp",
+          "desc": "共青团、青联界别调研"
+        },
+        {
+          "img": "/images/boundary/boundary-11.webp",
+          "desc": "共青团、青联界别座谈"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "工会",
+      "count": 3,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-12.webp",
+          "desc": "上工大讲堂活动"
+        },
+        {
+          "img": "/images/boundary/boundary-13.webp",
+          "desc": "上城区职工毅行大会"
+        },
+        {
+          "img": "/images/boundary/boundary-14.webp",
+          "desc": "职工毅行大会合影"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "妇联",
+      "count": 4,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-15.webp",
+          "desc": "妇联界别\"七一\"慰问"
+        },
+        {
+          "img": "/images/boundary/boundary-16.webp",
+          "desc": "妇联界别三八节品宋韵文化活动"
+        },
+        {
+          "img": "/images/boundary/boundary-17.webp",
+          "desc": "调研白马庄巾帼共富工坊"
+        },
+        {
+          "img": "/images/boundary/boundary-18.webp",
+          "desc": "妇联界别民宗界别合影"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "工商联",
+      "count": 3,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-19.webp",
+          "desc": "主体培训班合影"
+        },
+        {
+          "img": "/images/boundary/boundary-20.webp",
+          "desc": "深圳浙江商会考察"
+        },
+        {
+          "img": "/images/boundary/boundary-21.webp",
+          "desc": "民企500强参观考察"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "科技、科协",
+      "count": 2,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-22.webp",
+          "desc": "科技、科协界别活动"
+        },
+        {
+          "img": "/images/boundary/boundary-23.webp",
+          "desc": "科技、科协界别交流"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "侨、台",
+      "count": 3,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-24.webp",
+          "desc": "侨、台界别交流活动"
+        },
+        {
+          "img": "/images/boundary/boundary-25.webp",
+          "desc": "侨、台界别调研"
+        },
+        {
+          "img": "/images/boundary/boundary-26.webp",
+          "desc": "侨、台界别座谈"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "新闻文体",
+      "count": 2,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-27.webp",
+          "desc": "参观亚运会博物馆"
+        },
+        {
+          "img": "/images/boundary/boundary-28.webp",
+          "desc": "新闻文体界别参观活动"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "经济",
+      "count": 2,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-29.webp",
+          "desc": "经济界别活动"
+        },
+        {
+          "img": "/images/boundary/boundary-30.webp",
+          "desc": "经济界别交流"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "环境资源和农业",
+      "count": 4,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-31.webp",
+          "desc": "环境资源和农业界别活动"
+        },
+        {
+          "img": "/images/boundary/boundary-32.webp",
+          "desc": "环境资源和农业界别调研"
+        },
+        {
+          "img": "/images/boundary/boundary-33.webp",
+          "desc": "环境资源和农业界别座谈"
+        },
+        {
+          "img": "/images/boundary/boundary-34.webp",
+          "desc": "环境资源和农业界别考察"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "教育",
+      "count": 2,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-35.webp",
+          "desc": "教育界别活动"
+        },
+        {
+          "img": "/images/boundary/boundary-36.webp",
+          "desc": "教育界别交流"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "医卫",
+      "count": 4,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-37.webp",
+          "desc": "医卫界别义诊活动"
+        },
+        {
+          "img": "/images/boundary/boundary-38.webp",
+          "desc": "医卫界别健康宣教"
+        },
+        {
+          "img": "/images/boundary/boundary-39.webp",
+          "desc": "医卫界别交流座谈"
+        },
+        {
+          "img": "/images/boundary/boundary-40.webp",
+          "desc": "医卫界别考察"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "社会福利和保障",
+      "count": 3,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-41.webp",
+          "desc": "区领导参观社会福利和保障界别委员工作室"
+        },
+        {
+          "img": "/images/boundary/boundary-42.webp",
+          "desc": "社会福利和保障界别党纪学习教育"
+        },
+        {
+          "img": "/images/boundary/boundary-43.webp",
+          "desc": "联动邵逸夫医院开展残疾人义卖活动"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "民宗",
+      "count": 2,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-44.webp",
+          "desc": "民宗界别活动"
+        },
+        {
+          "img": "/images/boundary/boundary-45.webp",
+          "desc": "民宗界别交流"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "特邀",
+      "count": 5,
+      "images": [
+        {
+          "img": "/images/boundary/boundary-46.webp",
+          "desc": "特邀界别与商户座谈"
+        },
+        {
+          "img": "/images/boundary/boundary-47.webp",
+          "desc": "特邀界别开展读书会"
+        },
+        {
+          "img": "/images/boundary/boundary-48.webp",
+          "desc": "调研德寿宫附近停车泊位"
+        },
+        {
+          "img": "/images/boundary/boundary-49.webp",
+          "desc": "调研湖滨步行街营商环境"
+        },
+        {
+          "img": "/images/boundary/boundary-50.webp",
+          "desc": "德寿宫周边一件事座谈"
+        }
+      ]
+    }
+  ]
+}
