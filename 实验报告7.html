@@ -1,0 +1,983 @@
+<!doctype html>
+<!-- saved from url=(0098)file:///Users/quanta/Documents/PPT/Web-Mooc2/project/07/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A7.html -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>实验报告7</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    code[class*="language-"],
+      pre[class*="language-"] {
+        color: #333;
+        background: 0 0;
+        font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 1.4;
+        -moz-tab-size: 8;
+        -o-tab-size: 8;
+        tab-size: 8;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+      pre[class*="language-"] {
+        padding: 0.8em;
+        overflow: auto;
+        border-radius: 3px;
+        background: #f5f5f5;
+      }
+      :not(pre) > code[class*="language-"] {
+        padding: 0.1em;
+        border-radius: 0.3em;
+        white-space: normal;
+        background: #f5f5f5;
+      }
+      .token.blockquote,
+      .token.comment {
+        color: #969896;
+      }
+      .token.cdata {
+        color: #183691;
+      }
+      .token.doctype,
+      .token.macro.property,
+      .token.punctuation,
+      .token.variable {
+        color: #333;
+      }
+      .token.builtin,
+      .token.important,
+      .token.keyword,
+      .token.operator,
+      .token.rule {
+        color: #a71d5d;
+      }
+      .token.attr-value,
+      .token.regex,
+      .token.string,
+      .token.url {
+        color: #183691;
+      }
+      .token.atrule,
+      .token.boolean,
+      .token.code,
+      .token.command,
+      .token.constant,
+      .token.entity,
+      .token.number,
+      .token.property,
+      .token.symbol {
+        color: #0086b3;
+      }
+      .token.prolog,
+      .token.selector,
+      .token.tag {
+        color: #63a35c;
+      }
+      .token.attr-name,
+      .token.class,
+      .token.class-name,
+      .token.function,
+      .token.id,
+      .token.namespace,
+      .token.pseudo-class,
+      .token.pseudo-element,
+      .token.url-reference .token.variable {
+        color: #795da3;
+      }
+      .token.entity {
+        cursor: help;
+      }
+      .token.title,
+      .token.title .token.punctuation {
+        font-weight: 700;
+        color: #1d3e81;
+      }
+      .token.list {
+        color: #ed6a43;
+      }
+      .token.inserted {
+        background-color: #eaffea;
+        color: #55a532;
+      }
+      .token.deleted {
+        background-color: #ffecec;
+        color: #bd2c00;
+      }
+      .token.bold {
+        font-weight: 700;
+      }
+      .token.italic {
+        font-style: italic;
+      }
+      .language-json .token.property {
+        color: #183691;
+      }
+      .language-markup .token.tag .token.punctuation {
+        color: #333;
+      }
+      .language-css .token.function,
+      code.language-css {
+        color: #0086b3;
+      }
+      .language-yaml .token.atrule {
+        color: #63a35c;
+      }
+      code.language-yaml {
+        color: #183691;
+      }
+      .language-ruby .token.function {
+        color: #333;
+      }
+      .language-markdown .token.url {
+        color: #795da3;
+      }
+      .language-makefile .token.symbol {
+        color: #795da3;
+      }
+      .language-makefile .token.variable {
+        color: #183691;
+      }
+      .language-makefile .token.builtin {
+        color: #0086b3;
+      }
+      .language-bash .token.keyword {
+        color: #0086b3;
+      }
+      pre[data-line] {
+        position: relative;
+        padding: 1em 0 1em 3em;
+      }
+      pre[data-line] .line-highlight-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        display: block;
+        width: 100%;
+      }
+      pre[data-line] .line-highlight {
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: inherit 0;
+        margin-top: 1em;
+        background: hsla(24, 20%, 50%, 0.08);
+        background: linear-gradient(to right, hsla(24, 20%, 50%, 0.1) 70%, hsla(24, 20%, 50%, 0));
+        pointer-events: none;
+        line-height: inherit;
+        white-space: pre;
+      }
+      pre[data-line] .line-highlight:before,
+      pre[data-line] .line-highlight[data-end]:after {
+        content: attr(data-start);
+        position: absolute;
+        top: 0.4em;
+        left: 0.6em;
+        min-width: 1em;
+        padding: 0 0.5em;
+        background-color: hsla(24, 20%, 50%, 0.4);
+        color: #f4f1ef;
+        font: bold 65%/1.5 sans-serif;
+        text-align: center;
+        vertical-align: 0.3em;
+        border-radius: 999px;
+        text-shadow: none;
+        box-shadow: 0 1px #fff;
+      }
+      pre[data-line] .line-highlight[data-end]:after {
+        content: attr(data-end);
+        top: auto;
+        bottom: 0.4em;
+      }
+      html body {
+        font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
+        overflow: initial;
+        box-sizing: border-box;
+        word-wrap: break-word;
+      }
+      html body > :first-child {
+        margin-top: 0;
+      }
+      html body h1,
+      html body h2,
+      html body h3,
+      html body h4,
+      html body h5,
+      html body h6 {
+        line-height: 1.2;
+        margin-top: 1em;
+        margin-bottom: 16px;
+        color: #000;
+      }
+      html body h1 {
+        font-size: 2.25em;
+        font-weight: 300;
+        padding-bottom: 0.3em;
+      }
+      html body h2 {
+        font-size: 1.75em;
+        font-weight: 400;
+        padding-bottom: 0.3em;
+      }
+      html body h3 {
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+      html body h4 {
+        font-size: 1.25em;
+        font-weight: 600;
+      }
+      html body h5 {
+        font-size: 1.1em;
+        font-weight: 600;
+      }
+      html body h6 {
+        font-size: 1em;
+        font-weight: 600;
+      }
+      html body h1,
+      html body h2,
+      html body h3,
+      html body h4,
+      html body h5 {
+        font-weight: 600;
+      }
+      html body h5 {
+        font-size: 1em;
+      }
+      html body h6 {
+        color: #5c5c5c;
+      }
+      html body strong {
+        color: #000;
+      }
+      html body del {
+        color: #5c5c5c;
+      }
+      html body a:not([href]) {
+        color: inherit;
+        text-decoration: none;
+      }
+      html body a {
+        color: #08c;
+        text-decoration: none;
+      }
+      html body a:hover {
+        color: #00a3f5;
+        text-decoration: none;
+      }
+      html body img {
+        max-width: 100%;
+      }
+      html body > p {
+        margin-top: 0;
+        margin-bottom: 16px;
+        word-wrap: break-word;
+      }
+      html body > ol,
+      html body > ul {
+        margin-bottom: 16px;
+      }
+      html body ol,
+      html body ul {
+        padding-left: 2em;
+      }
+      html body ol.no-list,
+      html body ul.no-list {
+        padding: 0;
+        list-style-type: none;
+      }
+      html body ol ol,
+      html body ol ul,
+      html body ul ol,
+      html body ul ul {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      html body li {
+        margin-bottom: 0;
+      }
+      html body li.task-list-item {
+        list-style: none;
+      }
+      html body li > p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      html body .task-list-item-checkbox {
+        margin: 0 0.2em 0.25em -1.8em;
+        vertical-align: middle;
+      }
+      html body .task-list-item-checkbox:hover {
+        cursor: pointer;
+      }
+      html body blockquote {
+        margin: 16px 0;
+        font-size: inherit;
+        padding: 0 15px;
+        color: #5c5c5c;
+        background-color: #f0f0f0;
+        border-left: 4px solid #d6d6d6;
+      }
+      html body blockquote > :first-child {
+        margin-top: 0;
+      }
+      html body blockquote > :last-child {
+        margin-bottom: 0;
+      }
+      html body hr {
+        height: 4px;
+        margin: 32px 0;
+        background-color: #d6d6d6;
+        border: 0 none;
+      }
+      html body table {
+        margin: 10px 0 15px 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+        display: block;
+        width: 100%;
+        overflow: auto;
+        word-break: normal;
+        word-break: keep-all;
+      }
+      html body table th {
+        font-weight: 700;
+        color: #000;
+      }
+      html body table td,
+      html body table th {
+        border: 1px solid #d6d6d6;
+        padding: 6px 13px;
+      }
+      html body dl {
+        padding: 0;
+      }
+      html body dl dt {
+        padding: 0;
+        margin-top: 16px;
+        font-size: 1em;
+        font-style: italic;
+        font-weight: 700;
+      }
+      html body dl dd {
+        padding: 0 16px;
+        margin-bottom: 16px;
+      }
+      html body code {
+        font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+        font-size: 0.85em;
+        color: #000;
+        background-color: #f0f0f0;
+        border-radius: 3px;
+        padding: 0.2em 0;
+      }
+      html body code::after,
+      html body code::before {
+        letter-spacing: -0.2em;
+        content: "\00a0";
+      }
+      html body pre > code {
+        padding: 0;
+        margin: 0;
+        word-break: normal;
+        white-space: pre;
+        background: 0 0;
+        border: 0;
+      }
+      html body .highlight {
+        margin-bottom: 16px;
+      }
+      html body .highlight pre,
+      html body pre {
+        padding: 1em;
+        overflow: auto;
+        line-height: 1.45;
+        border: #d6d6d6;
+        border-radius: 3px;
+      }
+      html body .highlight pre {
+        margin-bottom: 0;
+        word-break: normal;
+      }
+      html body pre code,
+      html body pre tt {
+        display: inline;
+        max-width: initial;
+        padding: 0;
+        margin: 0;
+        overflow: initial;
+        line-height: inherit;
+        word-wrap: normal;
+        background-color: transparent;
+        border: 0;
+      }
+      html body pre code:after,
+      html body pre code:before,
+      html body pre tt:after,
+      html body pre tt:before {
+        content: normal;
+      }
+      html body blockquote,
+      html body dl,
+      html body ol,
+      html body p,
+      html body pre,
+      html body ul {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      html body kbd {
+        color: #000;
+        border: 1px solid #d6d6d6;
+        border-bottom: 2px solid #c7c7c7;
+        padding: 2px 4px;
+        background-color: #f0f0f0;
+        border-radius: 3px;
+      }
+      @media print {
+        html body {
+          background-color: #fff;
+        }
+        html body h1,
+        html body h2,
+        html body h3,
+        html body h4,
+        html body h5,
+        html body h6 {
+          color: #000;
+          page-break-after: avoid;
+        }
+        html body blockquote {
+          color: #5c5c5c;
+        }
+        html body pre {
+          page-break-inside: avoid;
+        }
+        html body table {
+          display: table;
+        }
+        html body img {
+          display: block;
+          max-width: 100%;
+          max-height: 100%;
+        }
+        html body code,
+        html body pre {
+          word-wrap: break-word;
+          white-space: pre;
+        }
+      }
+      .markdown-preview {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      .markdown-preview ul {
+        list-style: disc;
+      }
+      .markdown-preview ul ul {
+        list-style: circle;
+      }
+      .markdown-preview ul ul ul {
+        list-style: square;
+      }
+      .markdown-preview ol {
+        list-style: decimal;
+      }
+      .markdown-preview ol ol,
+      .markdown-preview ul ol {
+        list-style-type: lower-roman;
+      }
+      .markdown-preview ol ol ol,
+      .markdown-preview ol ul ol,
+      .markdown-preview ul ol ol,
+      .markdown-preview ul ul ol {
+        list-style-type: lower-alpha;
+      }
+      .markdown-preview .newpage,
+      .markdown-preview .pagebreak {
+        page-break-before: always;
+      }
+      .markdown-preview pre.line-numbers {
+        position: relative;
+        padding-left: 3.8em;
+        counter-reset: linenumber;
+      }
+      .markdown-preview pre.line-numbers > code {
+        position: relative;
+      }
+      .markdown-preview pre.line-numbers .line-numbers-rows {
+        position: absolute;
+        pointer-events: none;
+        top: 1em;
+        font-size: 100%;
+        left: 0;
+        width: 3em;
+        letter-spacing: -1px;
+        border-right: 1px solid #999;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .markdown-preview pre.line-numbers .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+      }
+      .markdown-preview pre.line-numbers .line-numbers-rows > span:before {
+        content: counter(linenumber);
+        color: #999;
+        display: block;
+        padding-right: 0.8em;
+        text-align: right;
+      }
+      .markdown-preview .mathjax-exps .MathJax_Display {
+        text-align: center !important;
+      }
+      .markdown-preview:not([data-for="preview"]) .code-chunk .code-chunk-btn-group {
+        display: none;
+      }
+      .markdown-preview:not([data-for="preview"]) .code-chunk .status {
+        display: none;
+      }
+      .markdown-preview:not([data-for="preview"]) .code-chunk .output-div {
+        margin-bottom: 16px;
+      }
+      .markdown-preview .md-toc {
+        padding: 0;
+      }
+      .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link {
+        display: inline;
+        padding: 0.25rem 0;
+      }
+      .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,
+      .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p {
+        display: inline;
+      }
+      .markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link {
+        font-weight: 800;
+      }
+      .scrollbar-style::-webkit-scrollbar {
+        width: 8px;
+      }
+      .scrollbar-style::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: transparent;
+      }
+      .scrollbar-style::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: rgba(150, 150, 150, 0.66);
+        border: 4px solid rgba(150, 150, 150, 0.66);
+        background-clip: content-box;
+      }
+      html body[for="html-export"]:not([data-presentation-mode]) {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+      }
+      html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview {
+        position: relative;
+        top: 0;
+        min-height: 100vh;
+      }
+      @media screen and (min-width: 914px) {
+        html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview {
+          padding: 2em calc(50% - 457px + 2em);
+        }
+      }
+      @media screen and (max-width: 914px) {
+        html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview {
+          padding: 2em;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview {
+          font-size: 14px !important;
+          padding: 1em;
+        }
+      }
+      @media print {
+        html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn {
+          display: none;
+        }
+      }
+      html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn {
+        position: fixed;
+        bottom: 8px;
+        left: 8px;
+        font-size: 28px;
+        cursor: pointer;
+        color: inherit;
+        z-index: 99;
+        width: 32px;
+        text-align: center;
+        opacity: 0.4;
+      }
+      html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn {
+        opacity: 1;
+      }
+      html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100%;
+        padding: 32px 0 48px 0;
+        font-size: 14px;
+        box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+        box-sizing: border-box;
+        overflow: auto;
+        background-color: inherit;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc::-webkit-scrollbar {
+        width: 8px;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: transparent;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: rgba(150, 150, 150, 0.66);
+        border: 4px solid rgba(150, 150, 150, 0.66);
+        background-clip: content-box;
+      }
+      html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a {
+        text-decoration: none;
+      }
+      html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc {
+        padding: 0 16px;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc
+        .md-toc
+        .md-toc-link-wrapper
+        .md-toc-link {
+        display: inline;
+        padding: 0.25rem 0;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc
+        .md-toc
+        .md-toc-link-wrapper
+        .md-toc-link
+        div,
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc
+        .md-toc
+        .md-toc-link-wrapper
+        .md-toc-link
+        p {
+        display: inline;
+      }
+      html
+        body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc]
+        .md-sidebar-toc
+        .md-toc
+        .md-toc-link-wrapper.highlighted
+        .md-toc-link {
+        font-weight: 800;
+      }
+      html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+        left: 300px;
+        width: calc(100% - 300px);
+        padding: 2em calc(50% - 457px - 300px / 2);
+        margin: 0;
+        box-sizing: border-box;
+      }
+      @media screen and (max-width: 1274px) {
+        html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+          padding: 2em;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+          width: 100%;
+        }
+      }
+      html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc {
+        display: none;
+      }
+      /* Please visit the URL below for more information: */
+      /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+      @font-face {
+        font-family: "MPE-CJK";
+        src: local("Source Han Serif SC"), local("Noto Serif CJK SC"), local("Songti SC"), local("SimSun");
+      }
+      @page {
+        size: A4 portrait;
+        /* 纵向 */
+        margin: 1cm;
+      }
+      .markdown-preview.markdown-preview.prince html,
+      .markdown-preview.markdown-preview.prince body {
+        font-family: "MPE-CJK", serif;
+        font-size: 12pt;
+        line-height: 1.75;
+      }
+      .markdown-preview.markdown-preview.prince h1,
+      .markdown-preview.markdown-preview.prince h2,
+      .markdown-preview.markdown-preview.prince h3,
+      .markdown-preview.markdown-preview.prince h4,
+      .markdown-preview.markdown-preview.prince h5,
+      .markdown-preview.markdown-preview.prince h6 {
+        font-family: "MPE-CJK", serif;
+        font-weight: 700;
+      }
+      .markdown-preview.markdown-preview.prince p,
+      .markdown-preview.markdown-preview.prince li,
+      .markdown-preview.markdown-preview.prince td,
+      .markdown-preview.markdown-preview.prince th,
+      .markdown-preview.markdown-preview.prince blockquote {
+        font-family: "MPE-CJK", serif;
+        text-align: justify;
+        word-break: normal;
+        overflow-wrap: break-word;
+      }
+      .markdown-preview.markdown-preview.prince strong,
+      .markdown-preview.markdown-preview.prince em {
+        font-family: "MPE-CJK", serif;
+      }
+      .markdown-preview.markdown-preview.prince code,
+      .markdown-preview.markdown-preview.prince pre {
+        font-family: "JetBrains Mono", "Consolas", monospace;
+      }
+    </style>
+  <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    // your code here
+  });
+  </script>
+</head>
+
+<body for="html-export" contenteditable="true">
+  <div class="crossnote markdown-preview">
+    <div>
+      <h1 id="实验7基于-hooks-的-react-课程管理">实验7：基于 Hooks 的 React 课程管理</h1>
+      <h2 id="一-实验名称">一、实验名称</h2>
+      <p>基于 Hooks 的 React 课程管理页面升级实验</p>
+      <h2 id="二-实验目标">二、实验目标</h2>
+      <p>
+        在实验5"React 课程管理页面"的基础上，进一步掌握 React Hooks 的实际应用，能够使用 Hooks
+        对已有项目进行功能增强与结构优化。通过本实验，达到以下目标：
+      </p>
+      <ol>
+        <li>理解并掌握 <code>useEffect</code> 的基本用法，能够处理副作用逻辑（DOM 操作、数据持久化）。</li>
+        <li>理解并掌握 <code>useRef</code> 的使用，能够完成输入框聚焦等 DOM 操作。</li>
+        <li>理解并掌握 <code>useMemo</code> 的使用，能够对列表过滤结果和统计数据进行缓存优化。</li>
+        <li>理解并掌握 <code>useCallback</code> 的使用，能够优化事件函数传递并减少子组件重渲染。</li>
+        <li>理解自定义 Hook 的封装思想，提升逻辑复用能力（useLocalStorage、useDebounce）。</li>
+        <li>在原有课程管理页面基础上，实现搜索防抖、数据持久化、统计显示、分类标签等增强功能。</li>
+        <li>提高函数组件开发能力，形成"逻辑用 Hook 封装，UI 用组件展示"的开发思路。</li>
+      </ol>
+      <h2 id="三-实验背景">三、实验背景</h2>
+      <p>实验5已经完成了一个基础的课程管理页面，主要包含以下功能：</p>
+      <ul>
+        <li>显示课程列表</li>
+        <li>展示课程名称与课程简介</li>
+        <li>新增课程</li>
+        <li>删除课程</li>
+        <li>学习按钮交互</li>
+        <li>列表渲染（map）</li>
+        <li>props 传值</li>
+        <li>state 状态管理（useState）</li>
+        <li>输入校验</li>
+        <li>页面基础样式</li>
+      </ul>
+      <p>
+        在此基础上，本实验将结合 Hooks 课程内容，对该页面进行功能扩展和代码优化，使项目更贴近现代 React
+        开发模式。Hooks 章节重点包含 <code>useEffect</code>、<code>useRef</code>、<code>useMemo</code>、<code>useCallback</code>
+        和自定义 Hook，本实验将围绕这些内容进行综合实践，实现搜索防抖、数据持久化、输入框自动聚焦、列表缓存优化等功能。
+      </p>
+      <h2 id="四-实验任务">四、实验任务</h2>
+      <p>在实验5原有课程管理页面基础上，完成以下升级内容：</p>
+      <h3 id="基础保留功能">基础保留功能</h3>
+      <ol>
+        <li>显示课程列表</li>
+        <li>显示课程名称和课程简介</li>
+        <li>新增课程</li>
+        <li>删除课程</li>
+        <li>学习按钮交互</li>
+        <li>使用 props 完成组件通信</li>
+        <li>使用 <code>useState</code> 管理页面状态</li>
+      </ol>
+      <h3 id="hooks-扩展功能">Hooks 扩展功能</h3>
+      <ol>
+        <li>使用 <code>useEffect</code> 实现页面首次加载时输入框自动聚焦</li>
+        <li>使用自定义 Hook <code>useLocalStorage</code> 将课程数据持久化到 <code>localStorage</code></li>
+        <li>使用 <code>useRef</code> 实现添加课程后输入框自动聚焦</li>
+        <li>使用 <code>useMemo</code> 对搜索过滤结果和统计数据进行缓存</li>
+        <li>使用 <code>useCallback</code> 优化学习、删除、添加等事件处理函数</li>
+        <li>封装自定义 Hook <code>useDebounce</code> 实现搜索防抖</li>
+        <li>增加课程搜索功能（支持按名称和简介搜索）</li>
+        <li>增加课程数量统计功能（全部/已完成/学习中/待开始）</li>
+        <li>增加课程分类标签（前端/后端/数据库/工具）</li>
+        <li>保持页面结构清晰，组件职责明确</li>
+      </ol>
+      <h2 id="五-实验技术要求">五、实验技术要求</h2>
+      <h3 id="1-必须使用">1. 必须使用</h3>
+      <ul>
+        <li>React 函数组件</li>
+        <li>JSX</li>
+        <li><code>useState</code></li>
+        <li><code>useEffect</code></li>
+        <li><code>useRef</code></li>
+        <li><code>useMemo</code></li>
+        <li><code>useCallback</code></li>
+        <li>props</li>
+        <li>事件绑定</li>
+        <li><code>map</code> 列表渲染</li>
+        <li>CSS 基础样式</li>
+      </ul>
+      <h3 id="2-建议使用">2. 建议使用</h3>
+      <ul>
+        <li>自定义 Hook</li>
+        <li><code>localStorage</code></li>
+        <li>条件渲染</li>
+        <li>受控组件</li>
+        <li>组件拆分</li>
+        <li>合理命名与目录整理</li>
+        <li>React.memo 优化子组件渲染</li>
+      </ul>
+      <h2 id="六-实验设计思路">六、实验设计思路</h2>
+      <p>Hook 对应功能设计</p>
+      <ul>
+        <li><code>useState</code>：管理课程列表、输入内容、搜索关键词、分类选择</li>
+        <li><code>useEffect</code>：页面首次加载时自动聚焦输入框；配合自定义 Hook 实现 localStorage 数据同步</li>
+        <li><code>useRef</code>：获取课程名称输入框 DOM 引用，新增课程后自动调用 focus()</li>
+        <li><code>useMemo</code>：缓存搜索过滤后的课程列表；缓存课程数量统计数据</li>
+        <li><code>useCallback</code>：缓存 handleLearn、handleAddCourse、handleDeleteCourse 等事件处理函数，避免子组件不必要的重渲染</li>
+        <li>自定义 Hook：<code>useLocalStorage</code> 封装 localStorage 读写逻辑；<code>useDebounce</code> 封装搜索防抖逻辑</li>
+      </ul>
+      <h3 id="1-课程新增功能">1. 课程新增功能</h3>
+      <p>
+        用户在输入框中输入课程名称（必填）、简介（选填）和分类后，点击"添加课程"按钮，即可将课程加入课程列表。若输入为空，则给出提示，不允许添加。新增成功后通过 useRef 使输入框自动聚焦。
+      </p>
+      <h3 id="2-课程删除功能">2. 课程删除功能</h3>
+      <p>每条课程卡片中都有"删除"按钮，点击后可移除该课程。删除后统计数据和 localStorage 自动同步更新。</p>
+      <h3 id="3-学习按钮交互">3. 学习按钮交互</h3>
+      <p>每条课程卡片中都有"学习"按钮，点击后弹出提示，例如"正在学习 React Hooks"。该函数通过 useCallback 缓存，避免子组件不必要的重渲染。</p>
+      <h3 id="4-搜索功能">4. 搜索功能</h3>
+      <p>用户输入关键词后，通过自定义 Hook useDebounce 实现 300ms 防抖延迟，根据课程名称和简介进行实时筛选。搜索结果数量实时显示。</p>
+      <h3 id="5-本地存储功能">5. 本地存储功能</h3>
+      <p>通过自定义 Hook useLocalStorage 封装 localStorage 读写逻辑。页面刷新后，课程数据从 localStorage 中重新读取，不会丢失。</p>
+      <h3 id="6-输入框自动聚焦">6. 输入框自动聚焦</h3>
+      <p>每次新增课程后，通过 useRef 获取输入框 DOM 引用并调用 focus() 方法，使课程名称输入框自动获得焦点，方便继续输入。页面首次加载时也会自动聚焦。</p>
+      <h3 id="7-列表缓存优化">7. 列表缓存优化</h3>
+      <p>
+        当课程列表较多时，通过 <code>useMemo</code> 缓存筛选结果和统计数据，减少不必要的重复计算。仅在课程列表或搜索关键词变化时重新计算。
+      </p>
+      <h3 id="8-回调函数优化">8. 回调函数优化</h3>
+      <p>
+        通过 <code>useCallback</code> 缓存传递给子组件的函数（handleLearn、handleAddCourse、handleDeleteCourse），减少由于函数引用变化导致的子组件重复渲染。配合 <code>React.memo</code> 使用，实现组件级渲染优化。
+      </p>
+      <h2 id="七-关键-hooks-使用分析">七、关键 Hooks 使用分析</h2>
+      <h3 id="1-useeffect-的作用">1. useEffect 的作用</h3>
+      <p>本实验中 <code>useEffect</code> 主要完成以下任务：</p>
+      <ul>
+        <li>页面首次加载时，自动将课程名称输入框聚焦，提升用户体验</li>
+        <li>在自定义 Hook <code>useLocalStorage</code> 中监听状态变化，自动同步保存到 <code>localStorage</code></li>
+        <li>在自定义 Hook <code>useDebounce</code> 中设置定时器实现搜索防抖</li>
+      </ul>
+      <p>
+        这体现了 <code>useEffect</code> 处理副作用的核心作用。副作用包括 DOM 操作、数据持久化、定时器等，本实验中的输入框聚焦、localStorage 同步和防抖定时器都属于典型的副作用场景。
+      </p>
+      <h3 id="2-useref-的作用">2. useRef 的作用</h3>
+      <p>
+        <code>useRef</code> 用于获取课程名称输入框的 DOM 引用，在新增课程成功后调用 <code>titleInputRef.current.focus()</code> 实现自动聚焦。useRef 不会触发重新渲染，适合保存 DOM 节点引用或跨渲染周期保持的可变值。
+      </p>
+      <h3 id="3-usememo-的作用">3. useMemo 的作用</h3>
+      <p>
+        课程搜索时，需要根据关键词对课程列表进行过滤。若每次渲染都重新计算过滤结果和统计数据，可能造成性能浪费。因此使用 <code>useMemo</code> 对 <code>filteredCourses</code> 和 <code>stats</code> 进行缓存，仅在课程列表或搜索关键词变化时重新计算。这符合 Hooks 课程中关于 <code>useMemo</code> 适用于列表过滤、排序和复杂计算的最佳实践。
+      </p>
+      <h3 id="4-usecallback-的作用">4. useCallback 的作用</h3>
+      <p>
+        <code>handleLearn</code>、<code>handleAddCourse</code>、<code>handleDeleteCourse</code> 作为回调函数传入子组件（CourseList、CourseCard）。如果每次渲染都重新创建函数引用，会导致子组件的 <code>React.memo</code> 浅比较失效，引发不必要的重渲染。通过 <code>useCallback</code> 缓存函数引用，并配合 <code>React.memo</code> 优化子组件，有效减少了不必要的渲染开销。
+      </p>
+      <h3 id="5-自定义-hook-的作用">5. 自定义 Hook 的作用</h3>
+      <p>
+        本实验封装了两个自定义 Hook：
+      </p>
+      <ul>
+        <li><strong>useLocalStorage</strong>：将状态管理与 localStorage 持久化封装在一起，初始化时读取已保存的数据，状态变化时自动写入，实现数据持久化逻辑的可复用。</li>
+        <li><strong>useDebounce</strong>：接收输入值和延迟时间，返回防抖后的值。在搜索功能中应用，避免用户每输入一个字符就触发过滤计算，提升输入流畅度。</li>
+      </ul>
+      <p>自定义 Hook 遵循 "逻辑复用、UI 分离" 的开发思路，是现代 React 开发的重要模式。</p>
+      <h2 id="八-系统实现功能列表">八、系统实现功能列表</h2>
+      <p>请根据实际完成情况勾选：</p>
+      <ul>
+        <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="" /> useEffect（localStorage 读写、输入框聚焦）</li>
+        <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="" /> useRef（新增课程后输入框自动聚焦）</li>
+        <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="" /> useMemo（搜索过滤结果缓存、统计数据缓存）</li>
+        <li class="task-list-item">
+          <input type="checkbox" class="task-list-item-checkbox" checked="" /> useCallback（学习/删除/添加事件函数缓存）
+        </li>
+        <li class="task-list-item">
+          <input type="checkbox" class="task-list-item-checkbox" checked="" /> 自定义 Hook（useLocalStorage、useDebounce）
+        </li>
+        <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="" /> 课程搜索功能（防抖）
+        </li>
+        <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="" /> 课程数量统计功能
+        </li>
+        <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="" /> 数据持久化（localStorage）
+        </li>
+        <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="" /> 课程分类标签
+        </li>
+      </ul>
+      <h2 id="九-实验结果截图">九、实验结果截图</h2>
+      <h3 id="1-页面整体效果">1. 页面整体效果</h3>
+      <p>页面采用渐变紫色背景，顶部为标题区域，包含统计卡片（全部课程/已完成/学习中/待开始），中间为搜索/筛选区和课程列表，底部为说明区域。课程以卡片形式展示，具有良好的视觉效果和交互体验。</p>
+      <p><img src="1-overview.png" alt="页面整体效果" style="max-width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" /></p>
+      <h3 id="2-新增课程功能效果">2. 新增课程功能效果</h3>
+      <p>在输入框中填写课程名称、简介和分类，点击"添加课程"按钮即可新增课程。若课程名称为空，系统会弹出提示"请输入课程名称！"。新增后课程会显示在列表中。</p>
+      <p><img src="2-add-course.png" alt="新增课程输入" style="max-width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" /></p>
+      <p>点击"添加课程"后，新课程成功添加到列表中，输入框自动聚焦，方便继续输入：</p>
+      <p><img src="3-after-add.png" alt="添加课程后效果" style="max-width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" /></p>
+      <h3 id="3-删除课程功能效果">3. 删除课程功能效果</h3>
+      <p>每条课程卡片都有"删除"按钮，点击后可移除该课程。删除后列表自动更新，统计数据同步变化。</p>
+      <p><img src="5-full-list.png" alt="删除课程效果" style="max-width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" /></p>
+      <h3 id="4-搜索功能效果">4. 搜索功能效果</h3>
+      <p>用户输入关键词后，通过 useDebounce 自定义 Hook 实现 300ms 防抖延迟搜索，根据课程名称和简介进行实时筛选，搜索结果数量实时显示。</p>
+      <p><img src="4-search.png" alt="搜索功能效果" style="max-width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" /></p>
+      <h3 id="5-数据持久化效果">5. 数据持久化效果</h3>
+      <p>通过 useEffect 监听课程列表变化，自动将数据保存到 localStorage。页面刷新后，课程数据从 localStorage 中重新读取，不会丢失。以下是浏览器开发者工具中 localStorage 的数据截图：</p>
+      <p><img src="5-full-list.png" alt="数据持久化" style="max-width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" /></p>
+      <h3 id="6-输入框聚焦效果">6. 输入框聚焦效果</h3>
+      <p>每次新增课程后，通过 useRef 获取输入框 DOM 引用并调用 focus() 方法，使课程名称输入框自动获得焦点，提升用户输入体验。页面首次加载时也会自动聚焦。</p>
+      <p><img src="6-learn-btn.png" alt="学习按钮交互" style="max-width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" /></p>
+    </div>
+  </div>
+</body>
+
+</html>
